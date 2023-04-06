@@ -58,7 +58,7 @@
             Hi, <br />I'm <span class="home_title-color">SURESH S</span
             ><br />Web Developer
           </h1>
-          <a download="" href="images/SURESH.pdf.pdf" class="button"> Get Resume</a>
+          <a download="" href="https://drive.google.com/file/d/1T8ijWaeKw4Ww4PF9jq11Zxjiuw52ORaA/view?usp=share_link" class="button"> Get Resume</a>
         </div>
 
         <div class="home_social">
@@ -1025,7 +1025,7 @@
         <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
         <div class="contact_container bd_grid">
-          <form action="https://formspree.io/f/mlekpdrk" class="contact_form">
+          <form name="myForm" action="https://formspree.io/f/xnqygeqw" onsubmit="return validateForm()" method="post">
             <input
               type="text"
               placeholder="Name"
@@ -1050,8 +1050,7 @@
               data-aos="fade-right"
               data-aos-delay="400"
             ></textarea>
-			  
-			 <a href="mailto:suresh29052001@gmail.com">
+			 
 
             <input
               type="button"
@@ -1126,6 +1125,13 @@ const showMenu = (toggleId, navId) => {
                   nav.classList.toggle('show')
             });
       }
+}
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
 }
 
 showMenu('nav_toggle','nav_menu')
